@@ -1,72 +1,44 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-layout="essencial" data-theme="claro">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#193e34">
-    <meta name="description" content="Caio dos Reis Aguiar. Energia, dados e automação. Primeiro teste do meu portfólio no GitHub Pages.">
-    <title>Caio Aguiar | Energia, dados e automação</title>
-    <link rel="stylesheet" href="./styles.css">
-    <script src="./script.js" defer></script>
+    <meta name="theme-color" content="#f6f7f2">
+    <meta name="description" content="Quatro direções para o portfólio de Caio dos Reis Aguiar. Energia, análise de dados e automação, em versões claras e escuras.">
+    <title>Caio Aguiar | Estudos de portfólio</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="./assets/fonts/DM-Sans.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./assets/fonts/Manrope.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./styles.css?v=layouts-1">
+    <script src="./script.js?v=layouts-1" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
-    <div class="page-shell">
-      <header class="topbar">
-        <a class="brand" href="./" aria-label="Caio Aguiar, início"><span class="brand-mark" aria-hidden="true">c<span>.</span></span>Caio Aguiar</a>
-        <a class="text-link" href="https://github.com/caioaguiarkdw/caioaguiarkdw.github.io">Ver o código <span aria-hidden="true">↗</span></a>
-      </header>
-
-      <main id="conteudo">
-        <section class="hero" aria-labelledby="titulo">
-          <div class="intro">
-            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Primeiro teste publicado</p>
-            <h1 id="titulo">Energia encontra<br>dados.<br><em>E vira projeto.</em></h1>
-            <p class="lead">Sou Caio dos Reis Aguiar. Este é o primeiro endereço do meu portfólio, um espaço para reunir projetos de energia, programação e análise de dados.</p>
-            <div class="actions">
-              <a class="button" href="#experimento">Experimente abaixo <span aria-hidden="true">↓</span></a>
-              <a class="text-link" href="https://www.linkedin.com/in/caio-aguiar-01919a236/">Meu LinkedIn <span aria-hidden="true">↗</span></a>
-            </div>
-            <p class="caption">Página de teste. O portfólio completo vem nos próximos passos.</p>
-          </div>
-
-          <div class="diagram" aria-hidden="true">
-            <div class="diagram-grid"></div>
-            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-            <div class="diagram-label label-top">ENTENDER</div>
-            <div class="diagram-center">energia<br><span>+</span><br>dados</div>
-            <div class="diagram-label label-bottom">MODELAR · TESTAR · CONSTRUIR</div>
-            <div class="diagram-index">01 / EM CONSTRUÇÃO</div>
-          </div>
-        </section>
-
-        <section class="experiment" id="experimento" aria-labelledby="experimento-titulo">
-          <div class="experiment-copy">
-            <p class="eyebrow">Um pequeno experimento</p>
-            <h2 id="experimento-titulo">O horário muda a conta.</h2>
-            <p>Arraste o controle e veja como muda o preço fora de ponta em relação à ponta. É só uma demonstração de interação, ainda não a calculadora de viabilidade de baterias.</p>
-          </div>
-          <div class="control-panel">
-            <label for="ratio">Fora de ponta custa <output id="ratio-value" for="ratio">30%</output> da ponta</label>
-            <input type="range" id="ratio" min="10" max="100" value="30" step="1" aria-describedby="range-help">
-            <div class="range-labels" aria-hidden="true"><span>10%</span><span>100%</span></div>
-            <div class="price-grid">
-              <div><span class="price-label">Ponta, valor hipotético</span><strong>R$ 1,50<span>/kWh</span></strong></div>
-              <div><span class="price-label">Fora de ponta</span><strong id="off-peak">R$ 0,45<span>/kWh</span></strong></div>
-            </div>
-            <p class="small-note" id="range-help">Valores fictícios para testar a página. Não representam uma tarifa vigente nem uma estimativa de retorno.</p>
-            <noscript><p class="small-note">Ative o JavaScript para atualizar os valores ao mover o controle.</p></noscript>
-          </div>
-        </section>
-
-        <section class="roadmap" aria-label="Próximos projetos">
-          <div><span class="item-number">01</span><h3>Baterias e tarifas</h3><p>Uma calculadora exploratória com hipóteses, gráficos e fontes.</p></div>
-          <div><span class="item-number">02</span><h3>IA e energia solar</h3><p>Pesquisa sobre classificação das condições de operação de módulos fotovoltaicos.</p></div>
-          <div><span class="item-number">03</span><h3>Processos e automação</h3><p>Estudos de caso sobre integração de sistemas e dados aplicados ao negócio.</p></div>
-        </section>
-      </main>
-
-      <footer><span>Caio dos Reis Aguiar</span><span>Feito com HTML, CSS e JavaScript · GitHub Pages</span></footer>
-    </div>
+    <a class="skip-link" href="#portfolio">Ir para o portfólio</a>
+    <header class="comparison-bar">
+      <a class="comparison-brand" href="./"><span class="comparison-monogram">CA<span>.</span></span><span>Estudos de portfólio<small>Quatro direções · nenhuma escolhida ainda</small></span></a>
+      <div class="design-tabs" role="tablist" aria-label="Opções de identidade visual">
+        <button id="tab-essencial" role="tab" aria-selected="true" aria-controls="portfolio" tabindex="0" data-layout="essencial"><span>01</span> Essencial</button>
+        <button id="tab-editorial" role="tab" aria-selected="false" aria-controls="portfolio" tabindex="-1" data-layout="editorial"><span>02</span> Editorial</button>
+        <button id="tab-tecnico" role="tab" aria-selected="false" aria-controls="portfolio" tabindex="-1" data-layout="tecnico"><span>03</span> Técnica</button>
+        <button id="tab-classico" role="tab" aria-selected="false" aria-controls="portfolio" tabindex="-1" data-layout="classico"><span>04</span> Clássica</button>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Ativar tema escuro"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">Escuro</span></button>
+    </header>
+    <section class="design-context" aria-label="Sobre a opção selecionada">
+      <p id="design-description">Essencial · Manrope + DM Sans. A identidade da dieta em uma apresentação profissional clara e direta.</p>
+      <button id="copy-option" type="button">Copiar link desta opção <span aria-hidden="true">↗</span></button>
+    </section>
+    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
+    <main id="portfolio" role="tabpanel" aria-labelledby="tab-essencial" tabindex="0"></main>
+    <noscript>
+      <section class="no-script"><h1>Caio dos Reis Aguiar</h1><p>Engenharia de Energia, análise de dados e automação.</p><p>Ative o JavaScript para comparar as quatro opções de layout.</p><a href="https://www.linkedin.com/in/caio-aguiar-01919a236/">Perfil no LinkedIn</a></section>
+    </noscript>
+    <footer class="comparison-footer"><span>Estudo visual · o conteúdo e os projetos ainda estão em revisão.</span><a href="https://github.com/caioaguiarkdw/caioaguiarkdw.github.io">Código e histórico no GitHub <span aria-hidden="true">↗</span></a></footer>
+    <dialog id="project-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-top"><span class="eyebrow" id="dialog-category"></span><button class="close-dialog" type="button" aria-label="Fechar resumo do projeto">Fechar <span aria-hidden="true">×</span></button></div>
+      <h2 id="dialog-title"></h2>
+      <div id="dialog-body"></div>
+      <div class="dialog-bottom"><span>Prévia de conteúdo para o portfólio.</span><a class="text-link" href="https://www.linkedin.com/in/caio-aguiar-01919a236/">Conversar no LinkedIn <span aria-hidden="true">↗</span></a></div>
+    </dialog>
   </body>
 </html>
