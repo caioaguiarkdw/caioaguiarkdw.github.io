@@ -1,28 +1,23 @@
-# Fontes e referencias visuais
+# Fontes e direitos
 
-A identidade do aplicativo pessoal "Monte a sua dieta" foi usada como referencia, sem alterar o aplicativo ou acessar a sua base de usuarios.
-
-Paleta de origem: verde-lima #c7e985, coral #f0a789 e azul #95bddc. As versoes claras usam fundos neutros e acentos mais escuros para leitura. Cada direcao tambem tem uma versao escura propria.
+A identidade usa como referência a direção técnica da galeria anterior e a paleta do aplicativo autoral Monte a sua dieta. A implementação desta proposta é estática e independente do aplicativo.
 
 ## Tipografia
 
-- DM Sans e Manrope: arquivos WOFF2 previamente preparados no portfolio local. Licencas conferidas no repositorio Google Fonts.
-- Lora: fonte variavel obtida do repositorio Google Fonts.
-- Space Grotesk: fonte variavel obtida do repositorio Google Fonts.
-- As fontes sao hospedadas neste proprio site. A pagina nao depende de chamadas ao Google Fonts durante a visita.
-- Os termos SIL Open Font License acompanham cada familia na pasta de fontes.
+DM Sans e Space Grotesk são as famílias utilizadas. Arquivos locais e licenças SIL Open Font License estão em `fonts/`. Manrope e Lora, usadas pela galeria histórica, também permanecem acompanhadas de suas licenças.
 
-Fontes oficiais:
+- [DM Sans / Google Fonts](https://github.com/google/fonts/tree/main/ofl/dmsans)
+- [Space Grotesk / Google Fonts](https://github.com/google/fonts/tree/main/ofl/spacegrotesk)
+- [Manrope / Google Fonts](https://github.com/google/fonts/tree/main/ofl/manrope)
+- [Lora / Google Fonts](https://github.com/google/fonts/tree/main/ofl/lora)
 
-https://github.com/google/fonts/tree/main/ofl/dmsans
-https://github.com/google/fonts/tree/main/ofl/manrope
-https://github.com/google/fonts/tree/main/ofl/lora
-https://github.com/google/fonts/tree/main/ofl/spacegrotesk
+## Figuras, texto e demonstrações
 
-## Figuras e demonstracoes
+- `images/tcc-curvas-iv.png` e `images/tcc-cubo-configuracoes.png`: figuras selecionadas do acervo do TCC de Caio, já preparadas para divulgação no portfólio. Nenhuma alteração foi feita na base experimental.
+- `images/compartilhar.svg` e sua renderização PNG: composição tipográfica criada para este site. O PNG é a imagem de compartilhamento, sem retrato gerado.
+- `../content/artigo.md`: artigo de Caio dos Reis Aguiar, elaborado para a EnergyC e apresentado como trabalho independente, sem afirmar aprovação ou publicação pela instituição. As referências oficiais acompanham o texto.
+- Fluxo Odoo: reconstrução conceitual nova, com dados fictícios. Sem código corporativo, nomes comerciais reais, valores de pedidos ou capturas de sistemas internos.
+- Demonstração da dieta: código novo com itens e referências fictícios. Sem conexão com a API ou banco do aplicativo de uso real.
+- Calculadora: código público deste portfólio. Cenários históricos e investimento hipotético. As fontes dos preços e os limites ficam junto dos resultados e do artigo.
 
-- As duas figuras de pesquisa foram reaproveitadas da selecao local do proprio TCC de Caio, preparada para o portfolio.
-- O fluxo de pedidos e uma reconstrucao conceitual, sem informacoes comerciais ou codigo da Amara.
-- A miniatura do aplicativo e uma representacao grafica sem dados pessoais, metricas de usuarios ou links de edicao.
-- O controle de tarifas usa valores ficticios e demonstra somente a interface.
-- Os layouts sao propostas para comparacao, nao uma identidade escolhida pelo usuario.
+Os direitos dos textos e figuras permanecem com seus respectivos autores. A disponibilização neste portfólio não representa concessão de licença geral sobre materiais corporativos ou acadêmicos não incluídos.

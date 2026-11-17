@@ -1,0 +1,40 @@
+"use strict";
+function runModelTests() {
+  const result = [], base = BESS.defaults;
+  const check = (name, pass) => result.push({ name, pass: !!pass });
+  const near = (a,b,tolerance=1e-7) => Math.abs(a-b)<tolerance;
+  const run = x => BESS.calculate({ ...base, ...x });
+  const annual = [4128.32,3001.60,2231.04,1157.16608];
+  BESS.scenarios.forEach((s,i)=> {
+    const r = run({peak:s.peak,offpeak:s.offpeak});
+    check(`${s.name}: economia anual`,near(r.firstYear,annual[i]));
+    check(`${s.name}: retorno simples`,near(r.simplePayback,20000/annual[i]));
+  });
+  check('Recarga inclui perdas uma vez',near(run({}).recharge,8/.9));
+  check('Capacidade útil limita consumo',run({capacity:3,daily:8}).initialEnergy===3);
+  check('Consumo limita capacidade',run({capacity:8,daily:3}).initialEnergy===3);
+  check('Investimento aparece uma vez',run({years:1}).cumulative===-20000+run({}).firstYear);
+  check('Fluxos descontados ao fim do ano',near(run({years:2,discount:10}).npv,-20000+4128.32/1.1+4128.32/1.1**2));
+  check('Capacidade integral no ano 1',run({degradation:10}).rows[1].capacity===8);
+  check('Degradação reduz capacidade ano 2',near(run({degradation:10}).rows[2].capacity,7.2));
+  check('Consumo abaixo do limite não degrada prematuramente',run({capacity:10,daily:5,degradation:10}).rows[2].energy===5);
+  check('O&M reduz fluxo operacional',near(run({maintenance:200}).firstYear,3928.32));
+  check('O&M existe mesmo sem dias',run({days:0,maintenance:200}).firstYear===-200);
+  check('Zero dias não recupera',run({days:0}).recovery===null && run({days:0}).simplePayback===null);
+  check('Zero energia não recupera',run({daily:0}).recovery===null);
+  check('Margem zero não inventa retorno',run({peak:1,offpeak:.9}).simplePayback===null);
+  check('Margem negativa não inventa retorno',run({peak:1,offpeak:2}).recovery===null);
+  check('Vida útil insuficiente',run({years:1}).recovery===null);
+  check('100% degradação zera anos seguintes',run({degradation:100}).rows[2].energy===0);
+  check('Desconto zero coincide acumulados',near(run({}).npv,run({}).cumulative));
+  check('Sem eficiência zero',!run({efficiency:0}).valid);
+  check('Sem eficiência acima de 100',!run({efficiency:101}).valid);
+  check('Sem número infinito',!run({investment:Infinity}).valid);
+  check('Sem NaN',!run({peak:NaN}).valid);
+  check('Sem string numérica',!run({days:'252'}).valid);
+  check('Sem vida fracionária',!run({years:1.5}).valid);
+  check('Sem capacidade negativa',!run({capacity:-1}).valid);
+  check('Primeira passagem pode anteceder saldo final negativo',(()=>{const r=run({investment:1000,maintenance:1000,degradation:100,years:10});return r.recovery!==null && r.cumulative<0;})());
+  check('Extremos válidos permanecem finitos',(()=>{const r=run({investment:1000000,capacity:500,daily:500,peak:20,offpeak:20,efficiency:1,years:40,days:365,maintenance:100000});return r.valid && r.rows.every(row=>Object.values(row).every(Number.isFinite));})());
+  return result;
+}

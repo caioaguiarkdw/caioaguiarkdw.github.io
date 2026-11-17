@@ -1,44 +1,33 @@
 <!doctype html>
-<html lang="pt-BR" data-layout="essencial" data-theme="claro">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#f6f7f2">
-    <meta name="description" content="Quatro direções para o portfólio de Caio dos Reis Aguiar. Energia, análise de dados e automação, em versões claras e escuras.">
-    <title>Caio Aguiar | Estudos de portfólio</title>
-    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-    <link rel="preload" href="./assets/fonts/DM-Sans.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./assets/fonts/Manrope.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="./styles.css?v=layouts-1">
-    <script src="./script.js?v=layouts-1" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#portfolio">Ir para o portfólio</a>
-    <header class="comparison-bar">
-      <a class="comparison-brand" href="./"><span class="comparison-monogram">CA<span>.</span></span><span>Estudos de portfólio<small>Quatro direções · nenhuma escolhida ainda</small></span></a>
-      <div class="design-tabs" role="tablist" aria-label="Opções de identidade visual">
-        <button id="tab-essencial" role="tab" aria-selected="true" aria-controls="portfolio" tabindex="0" data-layout="essencial"><span>01</span> Essencial</button>
-        <button id="tab-editorial" role="tab" aria-selected="false" aria-controls="portfolio" tabindex="-1" data-layout="editorial"><span>02</span> Editorial</button>
-        <button id="tab-tecnico" role="tab" aria-selected="false" aria-controls="portfolio" tabindex="-1" data-layout="tecnico"><span>03</span> Técnica</button>
-        <button id="tab-classico" role="tab" aria-selected="false" aria-controls="portfolio" tabindex="-1" data-layout="classico"><span>04</span> Clássica</button>
-      </div>
-      <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false" aria-label="Ativar tema escuro"><span class="theme-symbol" aria-hidden="true">◐</span><span id="theme-label">Escuro</span></button>
-    </header>
-    <section class="design-context" aria-label="Sobre a opção selecionada">
-      <p id="design-description">Essencial · Manrope + DM Sans. A identidade da dieta em uma apresentação profissional clara e direta.</p>
-      <button id="copy-option" type="button">Copiar link desta opção <span aria-hidden="true">↗</span></button>
-    </section>
-    <p id="announcement" class="sr-only" role="status" aria-live="polite"></p>
-    <main id="portfolio" role="tabpanel" aria-labelledby="tab-essencial" tabindex="0"></main>
-    <noscript>
-      <section class="no-script"><h1>Caio dos Reis Aguiar</h1><p>Engenharia de Energia, análise de dados e automação.</p><p>Ative o JavaScript para comparar as quatro opções de layout.</p><a href="https://www.linkedin.com/in/caio-aguiar-01919a236/">Perfil no LinkedIn</a></section>
-    </noscript>
-    <footer class="comparison-footer"><span>Estudo visual · o conteúdo e os projetos ainda estão em revisão.</span><a href="https://github.com/caioaguiarkdw/caioaguiarkdw.github.io">Código e histórico no GitHub <span aria-hidden="true">↗</span></a></footer>
-    <dialog id="project-dialog" aria-labelledby="dialog-title">
-      <div class="dialog-top"><span class="eyebrow" id="dialog-category"></span><button class="close-dialog" type="button" aria-label="Fechar resumo do projeto">Fechar <span aria-hidden="true">×</span></button></div>
-      <h2 id="dialog-title"></h2>
-      <div id="dialog-body"></div>
-      <div class="dialog-bottom"><span>Prévia de conteúdo para o portfólio.</span><a class="text-link" href="https://www.linkedin.com/in/caio-aguiar-01919a236/">Conversar no LinkedIn <span aria-hidden="true">↗</span></a></div>
-    </dialog>
-  </body>
-</html>
+<html lang="pt-BR" data-theme="escuro"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111410"><meta name="description" content="Caio dos Reis Aguiar. Engenharia de Energia pela UnB, dados, programação e processos em quatro projetos concretos.">
+<title>Caio Aguiar | Energia, dados e processos</title><meta property="og:title" content="Caio Aguiar | Energia, dados e processos"><meta property="og:description" content="Caio dos Reis Aguiar. Engenharia de Energia pela UnB, dados, programação e processos em quatro projetos concretos.">
+<meta property="og:type" content="website"><meta property="og:locale" content="pt_BR">
+<meta property="og:image" content="https://caioaguiarkdw.github.io/assets/images/compartilhar.png">
+<meta property="og:image:alt" content="Caio dos Reis Aguiar. Energia, dados, programação e processos.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<script src="./assets/theme.js"></script><link rel="stylesheet" href="./assets/site.css">
+<script src="./assets/site.js" defer></script>
+
+</head><body><a class="skip-link" href="#main">Ir para o conteúdo</a>
+<div class="mobile-header"><a class="brand" href="./" aria-label="Caio Aguiar, início"><span class="brand-mark">CA.</span><strong>Caio Aguiar</strong></a><div class="mobile-actions"><button class="theme-button" data-theme-toggle type="button"><span>Tema claro</span><b aria-hidden="true">◐</b></button><button id="menu-toggle" class="icon-button" aria-controls="navigation" aria-expanded="false" aria-label="Abrir navegação">☰</button></div></div>
+<div class="site-shell"><aside id="navigation" class="sidebar"><a class="brand" href="./"><span class="brand-mark">CA.</span><span><strong>Caio Aguiar</strong><small>ENERGIA · DADOS · PROCESSOS</small></span></a>
+<button id="nav-close" class="button small" type="button">Fechar navegação</button>
+<p class="sidebar-summary">Problemas de energia vistos pelos dados, pelos sistemas e pela forma de trabalhar.</p><nav class="sidebar-nav" aria-label="Principal"><a href="./" aria-current="page">Início <span>00</span></a><a href="./projetos/tcc/" >IA e fotovoltaica<span>01</span></a><a href="./projetos/odoo/" >Processos e Odoo<span>02</span></a><a href="./projetos/baterias/" >Tarifas e baterias<span>03</span></a><a href="./projetos/dieta/" >Aplicativo de dieta<span>04</span></a></nav>
+<div class="sidebar-foot"><p>Engenharia de Energia pela UnB</p><div class="sidebar-links"><a href="https://www.linkedin.com/in/caio-aguiar-01919a236/">LinkedIn</a><a href="https://github.com/caioaguiarkdw">GitHub</a></div><button class="theme-button" data-theme-toggle type="button"><span>Tema claro</span><b aria-hidden="true">◐</b></button></div></aside>
+<button class="nav-scrim" tabindex="-1" aria-label="Fechar navegação"></button>
+<main id="main" class="site-main" tabindex="-1"><div class="content"><div class="topline"><p class="eyebrow dot">Portfólio / Caio dos Reis Aguiar</p><span class="status-pill">Energia, pesquisa e tecnologia</span></div><header class="hero"><div class="hero-grid"><div><p class="eyebrow">Caio dos Reis Aguiar</p><h1>Energia, dados<br>e <span>processos.</span></h1><p class="hero-lead">Da assinatura elétrica de um módulo solar ao fluxo de compras de uma equipe. Trabalho com organização de informações, programação e análise para entender problemas e construir ferramentas úteis.</p><div class="actions"><a class="button primary" href="#projetos">Explorar projetos <span aria-hidden="true">↓</span></a><a class="button" href="#contato">Entrar em contato</a></div></div><div class="hero-note"><strong>Formação em Engenharia de Energia pela UnB</strong><p>Mobilidade acadêmica em Engenharia Elétrica na UFBA. Vivência no Ministério de Minas e Energia e na equipe Wind da Amara NZero.</p></div></div></header>
+<section id="projetos" class="section"><div class="section-heading"><div><p class="eyebrow">01 / Trabalhos selecionados</p><h2>Projetos que mostram<br>como trabalho.</h2></div><p>Pesquisa, experiência profissional, análise de energia e desenvolvimento de um aplicativo. Cada caso apresenta o contexto, minha participação e os limites da entrega.</p></div><div class="project-list">
+<a class="project-row" href="./projetos/tcc/"><span class="project-number">01</span><h3><small>Pesquisa acadêmica · TCC</small>Reconhecer condições de módulos solares</h3><p>Curvas corrente-tensão, representações dos dados e validação de modelos de aprendizado de máquina.<span class="tags"><span class="tag">Python</span><span class="tag">Fotovoltaica</span><span class="tag">Validação experimental</span></span></p><span class="arrow-link" aria-hidden="true">↗</span></a>
+<a class="project-row" href="./projetos/odoo/"><span class="project-number">02</span><h3><small>Experiência profissional · Amara NZero</small>Dar continuidade à informação entre etapas</h3><p>Mapeamento de processos, customizações Odoo e automação de informações no apoio à equipe Wind.<span class="tags"><span class="tag">Odoo / Python</span><span class="tag">Processos</span><span class="tag">Power Automate</span></span></p><span class="arrow-link" aria-hidden="true">↗</span></a>
+<a class="project-row" href="./projetos/baterias/"><span class="project-number">03</span><h3><small>Análise técnico-econômica · Ferramenta pública</small>Quando a diferença entre tarifas paga a bateria?</h3><p>Artigo autoral e calculadora de arbitragem para explorar preços, perdas, uso e investimento.<span class="tags"><span class="tag">Armazenamento</span><span class="tag">Fluxo de caixa</span><span class="tag">Comunicação</span></span></p><span class="arrow-link" aria-hidden="true">↗</span></a>
+<a class="project-row" href="./projetos/dieta/"><span class="project-number">04</span><h3><small>Aplicativo em uso · Demonstração independente</small>Da planilha a uma aplicação compartilhada</h3><p>Evolução de uma necessidade real em regras, cálculos, histórico e cuidado com dados.<span class="tags"><span class="tag">React / TypeScript</span><span class="tag">Regras de negócio</span><span class="tag">Validação</span></span></p><span class="arrow-link" aria-hidden="true">↗</span></a>
+</div></section>
+<section class="section"><div class="system-card"><div><p class="eyebrow">Experimente / Armazenamento</p><h3>Uma tarifa barata só conta parte da história.</h3><p>Veja como eficiência, energia efetivamente utilizada e vida útil mudam o resultado. A calculadora mostra o mecanismo, as premissas e o fluxo de cada ano.</p><div class="actions"><a class="button primary" href="./projetos/baterias/#calculadora">Abrir calculadora</a></div></div><div class="flow-diagram" aria-label="Mecanismo da arbitragem tarifária"><div class="flow-node"><strong>Comprar energia</strong><small>Horário barato</small></div><span class="flow-arrow" aria-hidden="true">↓</span><div class="flow-node"><strong>Armazenar</strong><small>Com perdas no ciclo</small></div><span class="flow-arrow" aria-hidden="true">↓</span><div class="flow-node"><strong>Atender ao consumo</strong><small>Evitar compra na ponta</small></div></div></div></section>
+<section class="section" id="trajetoria"><div class="section-heading"><div><p class="eyebrow">02 / Trajetória</p><h2>Uma base em energia.<br>Prática entre áreas.</h2></div><p>A formação e as experiências aproximaram o problema físico, o trabalho com dados e o funcionamento das organizações.</p></div><div class="timeline"><div class="timeline-row"><span class="eyebrow">Formação</span><div><strong>Engenharia de Energia pela Universidade de Brasília</strong><p>Um ano de mobilidade acadêmica em Engenharia Elétrica na Universidade Federal da Bahia.</p></div></div><div class="timeline-row"><span class="eyebrow">Setor público</span><div><strong>Ministério de Minas e Energia</strong><p>Vivência no setor público de energia, com organização de informações e acompanhamento de atividades da área.</p></div></div><div class="timeline-row"><time>03/2025 a 03/2026</time><div><strong>Estágio na Amara NZero · equipe Wind</strong><p>Apoio a processos comerciais, compras e informações. Participação no mapeamento de fluxos e em frentes de automação.</p></div></div></div></section>
+<section class="section"><div class="section-heading"><div><p class="eyebrow">03 / Como trabalho</p><h2>Competências que aparecem nas entregas.</h2></div><p>Escolher uma representação, relacionar registros e conferir uma hipótese são decisões que atravessam os projetos.</p></div><div class="evidence-grid"><div class="evidence-card"><strong>Estruturar e analisar dados</strong><p>Tratamento de curvas, comparação de modelos e atenção ao agrupamento experimental no TCC.</p></div><div class="evidence-card"><strong>Traduzir processos em sistemas</strong><p>Etapas, responsáveis e referências entre informações no caso Odoo.</p></div><div class="evidence-card"><strong>Construir e validar ferramentas</strong><p>Contas verificáveis na calculadora e regras de negócio explícitas no aplicativo.</p></div></div></section>
+<section id="contato" class="contact"><div><p class="eyebrow">Contato</p><h2>Vamos conversar.</h2><p>Interesse em oportunidades em Salvador, Camaçari e em trabalho remoto.</p></div><div><a class="text-link" href="mailto:caioaguiarkdw@gmail.com">caioaguiarkdw@gmail.com</a><div class="sidebar-links"><a href="https://www.linkedin.com/in/caio-aguiar-01919a236/">LinkedIn</a><a href="https://github.com/caioaguiarkdw">GitHub</a></div></div></section>
+<footer class="footer"><span>Caio dos Reis Aguiar · Portfólio profissional</span><nav aria-label="Rodapé"><a href="./">Início</a><a href="mailto:caioaguiarkdw@gmail.com">E-mail</a><a href="https://github.com/caioaguiarkdw/caioaguiarkdw.github.io">Código do site</a></nav></footer></div></main></div>
+<p id="announcement" class="sr-only" role="status" aria-live="polite"></p></body></html>
