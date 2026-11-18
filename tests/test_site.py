@@ -62,7 +62,9 @@ def main():
                 check('Painéis internos '+label,page.evaluate('[...document.querySelectorAll(".calculator-form,.calculator-results,.field-grid,.result-cards,.ratio-control")].every(e=>e.scrollWidth<=e.clientWidth+1)'))
                 check('Controles não cortados '+label,page.evaluate('(()=>{const r=document.querySelector("#calculator").getBoundingClientRect();return [...document.querySelectorAll("#calculator input,#calculator select,.result-card")].filter(e=>e.getBoundingClientRect().width).every(e=>e.getBoundingClientRect().right<=r.right+1)})()'))
               if route=='projetos/odoo/':
-                check('Diagramas Amara não cortados '+label,page.evaluate('[...document.querySelectorAll(".amara-diagram,.amara-layers,.amara-demo-body,.amara-deliveries")].every(e=>e.scrollWidth<=e.clientWidth+1)'))
+                check('Diagramas Amara não cortados '+label,page.evaluate('[...document.querySelectorAll(".amara-workspace,.amara-canvas,.amara-module,.amara-demo-body")].every(e=>e.scrollWidth<=e.clientWidth+1)'))
+                columns=page.locator('.amara-workspace').evaluate_all('(panels)=>panels.map(p=>getComputedStyle(p).gridTemplateColumns.split(" ").length)')
+                check('Colunas dos projetos Amara '+label,columns==[1 if width<=740 else 2]*2)
               if width in (390,1440):
                 name=(route.replace('/','-') or 'inicio')+f'-{theme}-{width}'
                 page.screenshot(path=str(artifacts/(name+'.png')),full_page=route!='projetos/baterias/')
