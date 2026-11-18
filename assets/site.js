@@ -65,6 +65,15 @@
   }
   $$("[data-stage]").forEach(b => b.addEventListener("click", () => stage(+b.dataset.stage)));
   if ($("#process-stage")) { stage(0); $("#process-reset").addEventListener("click", () => stage(0)); }
+  if ($("#sales-demo")) {
+    function salesView(view) {
+      $$("[data-sales-view]").forEach(button => button.setAttribute("aria-pressed", String(button.dataset.salesView === view)));
+      $$("[data-sales-panel]").forEach(panel => { panel.hidden = panel.dataset.salesPanel !== view; });
+      announce(view === "items" ? "Detalhamento fictício por item exibido." : "Resumo fictício da oferta exibido.");
+    }
+    $$("[data-sales-view]").forEach(button => button.addEventListener("click", () => salesView(button.dataset.salesView)));
+    $("#sales-reset").addEventListener("click", () => { salesView("offer"); $('[data-sales-view="offer"]').focus(); });
+  }
   const diet = $("#diet-demo");
   if (diet) {
     const items = [{ kcal: 120, protein: 5, carbs: 20, fat: 2.2 }, { kcal: 180, protein: 20, carbs: 10, fat: 6.7 }, { kcal: 80, protein: 2, carbs: 14, fat: 1.8 }];

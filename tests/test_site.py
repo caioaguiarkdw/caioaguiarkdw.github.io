@@ -61,6 +61,8 @@ def main():
               if route=='projetos/baterias/':
                 check('Painéis internos '+label,page.evaluate('[...document.querySelectorAll(".calculator-form,.calculator-results,.field-grid,.result-cards,.ratio-control")].every(e=>e.scrollWidth<=e.clientWidth+1)'))
                 check('Controles não cortados '+label,page.evaluate('(()=>{const r=document.querySelector("#calculator").getBoundingClientRect();return [...document.querySelectorAll("#calculator input,#calculator select,.result-card")].filter(e=>e.getBoundingClientRect().width).every(e=>e.getBoundingClientRect().right<=r.right+1)})()'))
+              if route=='projetos/odoo/':
+                check('Diagramas Amara não cortados '+label,page.evaluate('[...document.querySelectorAll(".amara-diagram,.amara-layers,.amara-demo-body,.amara-deliveries")].every(e=>e.scrollWidth<=e.clientWidth+1)'))
               if width in (390,1440):
                 name=(route.replace('/','-') or 'inicio')+f'-{theme}-{width}'
                 page.screenshot(path=str(artifacts/(name+'.png')),full_page=route!='projetos/baterias/')
@@ -101,6 +103,16 @@ def main():
         page.goto(base+'/projetos/odoo/');page.click('[data-stage="4"]')
         check('Odoo navega etapas','PED-DEMO-001' in page.locator('#process-stage').inner_text())
         page.click('#process-reset');check('Odoo reset','Registrar o contexto' in page.locator('#process-stage').inner_text())
+        check('Dois projetos da Amara presentes',page.locator('#power-automate').is_visible() and page.locator('#odoo').is_visible())
+        page.click('[data-sales-view="items"]')
+        check('Visão por item abre detalhamento',page.locator('[data-sales-panel="items"]').is_visible() and not page.locator('[data-sales-panel="offer"]').is_visible())
+        check('Exemplo preserva a mesma oferta',page.locator('[data-sales-panel="items"] tbody tr').count()==2 and page.locator('[data-sales-panel="items"] tbody td:first-child').all_text_contents()==['OF-DEMO','OF-DEMO'])
+        check('Soma dos itens coincide com o resumo comercial',page.evaluate('''()=>{const n=t=>Number(t.replace(/[^0-9,.-]/g,"").replaceAll(".","").replace(",","."));const rows=[...document.querySelectorAll('[data-sales-panel="items"] tbody tr')];const values=[...document.querySelectorAll('.amara-offer dd')];const sales=rows.reduce((s,r)=>s+n(r.cells[3].textContent),0);const costs=rows.reduce((s,r)=>s+n(r.cells[4].textContent),0);return Math.abs(sales-n(values[1].textContent))<0.001 && Math.abs(costs-n(values[2].textContent))<0.001 && Math.abs((sales-costs)/sales*100-n(values[3].textContent))<0.001;}'''))
+        check('Estado acessível acompanha o detalhamento',page.locator('[data-sales-view="items"]').get_attribute('aria-pressed')=='true')
+        page.click('#sales-reset')
+        check('Reset comercial restaura visão e foco',page.locator('[data-sales-panel="offer"]').is_visible() and page.evaluate('document.activeElement.dataset.salesView')=='offer')
+        page.keyboard.press('Tab');page.keyboard.press('Enter')
+        check('Detalhamento funciona por teclado',page.locator('[data-sales-panel="items"]').is_visible())
         page.goto(base+'/projetos/dieta/');page.click('#diet-save');snapshot=page.locator('#diet-history').inner_text()
         page.locator('#diet-0').evaluate('(e)=>{e.value="200";e.dispatchEvent(new Event("input",{bubbles:true}))}')
         check('Dieta calcula proporcionalmente',page.locator('[data-nutrient="kcal"]').inner_text()=='500')
@@ -126,6 +138,7 @@ def main():
         nojs=browser.new_context(java_script_enabled=False,viewport={'width':390,'height':844});nj=nojs.new_page()
         for route in ROUTES:
             nj.goto(base+'/'+route);check('Sem JS mantém conteúdo '+route,nj.locator('h1').count()==1 and nj.locator('.sidebar-nav').is_visible())
+            if route=='projetos/odoo/': check('Sem JS mantém exemplo por item',nj.locator('[data-sales-panel="items"]').is_visible())
         browser.close()
     finally:
         service.shutdown()

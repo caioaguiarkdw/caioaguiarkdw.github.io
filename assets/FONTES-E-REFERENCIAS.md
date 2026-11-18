@@ -17,6 +17,7 @@ DM Sans e Space Grotesk são as famílias utilizadas. Arquivos locais e licença
 - `images/compartilhar.svg` e sua renderização PNG: composição tipográfica criada para este site. O PNG é a imagem de compartilhamento, sem retrato gerado.
 - `../content/artigo.md`: artigo de Caio dos Reis Aguiar, elaborado para a EnergyC e apresentado como trabalho independente, sem afirmar aprovação ou publicação pela instituição. As referências oficiais acompanham o texto.
 - Fluxo Odoo: reconstrução conceitual nova, com dados fictícios. Sem código corporativo, nomes comerciais reais, valores de pedidos ou capturas de sistemas internos.
+- Caso Amara revisado em 18/11/2026: texto, mapa das quatro dimensões, fluxo Power Automate/Zendesk e fluxo Odoo reconstruídos a partir do mapeamento autoral, apresentação e documentação do estágio. A imagem ou exportação integral do quadro Miro não é distribuída. O exemplo comercial por oferta e por item contém valores inteiramente fictícios.
 - Demonstração da dieta: código novo com itens e referências fictícios. Sem conexão com a API ou banco do aplicativo de uso real.
 - Calculadora: código público deste portfólio. Cenários históricos e investimento hipotético. As fontes dos preços e os limites ficam junto dos resultados e do artigo.
 

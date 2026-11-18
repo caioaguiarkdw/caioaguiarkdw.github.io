@@ -6,6 +6,10 @@ O TCC usa a referência metodológica de novembro de 2026: 190 unidades experime
 
 O caso Amara distingue as customizações Odoo/Python da frente Zendesk/Power Automate. A integração completa entre os sistemas aparece como continuidade futura. Os ganhos são qualitativos, sem porcentagens de tempo ou custo. O fluxo público foi reconstruído com dados fictícios.
 
+Na revisão de 18/11/2026, o quadro Miro foi cruzado com a apresentação e o relatório de estágio para dar espaço aos dois projetos. O caso passou a mostrar extração dos memoriais, lançamento de oportunidade e itens, vínculos pelos identificadores e acompanhamento das execuções no Power Automate/Zendesk. Rotinas complementares de hash e exportação paginada são descritas como documentação de desenvolvimento. No Odoo, o foco é a preparação da compra, as referências entre registros e as customizações desenvolvidas. A retirada posterior do Power Automate foi informada pelo autor e não altera a existência da implementação histórica.
+
+O material do Miro não foi incorporado como captura ou exportação ao site. Foram criados diagramas próprios e um exemplo comercial fictício com dois níveis de leitura. Os valores de venda e custo do exemplo representam totais por linha e somam os mesmos valores apresentados no resumo da oferta.
+
 O aplicativo real usa React/TypeScript/Vinext, Cloudflare Workers e D1. O caso descreve regras, snapshots, revisões e rascunho. A demonstração pública funciona em memória e não acessa a aplicação real. As quantidades e referências são fictícias, sem recomendação nutricional.
 
 ## Modelo BESS
@@ -63,6 +67,8 @@ A versão foi exercitada no Microsoft Edge em modo headless com Playwright Pytho
 
 Na execução registrada, 296 verificações automatizadas passaram. A inspeção visual de capturas levou à correção do corte interno da calculadora em telas pequenas. Os testes agora verificam esse problema diretamente, pois apenas medir a largura do documento não o detectava.
 
+A revisão dos dois casos Amara acrescentou verificações de largura interna dos diagramas, alternância entre oferta e itens, referência comum da oferta, consistência entre totais e linhas, estado acessível dos botões, uso por teclado, reset com retorno do foco e conteúdo sem JavaScript. A execução dessa revisão aprovou 314 verificações, incluindo novamente as 50 combinações de página, tema e largura.
+
 Uma conferência adicional calculou o contraste de 36 pares da paleta: texto principal, secundário e acento sobre seis superfícies em ambos os temas. Todos ficaram acima de 4,5:1, com menor valor de 5,19:1. Esse cálculo de tokens não substitui uma auditoria de todos os estados renderizados.
 
 A auditoria final conferiu 101 referências locais entre links, ativos e âncoras, sem destinos ausentes nem IDs duplicados nas cinco páginas. O artigo público foi comparado ao trecho autoral da fonte e permaneceu idêntico, incluindo referências. O iniciador de prévia respondeu HTTP 200 nas cinco rotas, e o processo usado nesse teste foi encerrado.
@@ -73,4 +79,4 @@ O antivírus local injetou requisições próprias no navegador durante a valida
 
 Foram realizadas passagens editorial, visual e técnica, incluindo revisão independente de fontes, código, links e capturas. As páginas não publicam os extratos usados na preparação.
 
-A validação de teclado e cores é básica, não uma certificação completa de acessibilidade. Não foram executados testes com leitor de tela, Safari, Firefox ou dispositivos físicos. Os links externos foram usados como referências, sem prometer disponibilidade futura. A implantação pública desta proposta não foi executada e depende de aprovação.
+A validação de teclado e cores é básica, não uma certificação completa de acessibilidade. Não foram executados testes com leitor de tela, Safari, Firefox ou dispositivos físicos. Os links externos foram usados como referências, sem prometer disponibilidade futura. A publicação inicial foi autorizada e conferida no GitHub Pages. Cada atualização exige conferir novamente o deploy e o conteúdo servido.

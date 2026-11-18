@@ -1,6 +1,6 @@
 # Caio dos Reis Aguiar · Portfólio
 
-Portfólio estático de energia, dados, programação e processos. A versão da branch `portfolio-final` reúne a página inicial e quatro estudos de caso. A promoção para o site principal depende da aprovação de Caio. A galeria anterior permanece no histórico Git, no commit `69e7017`, e na branch publicada enquanto a proposta é avaliada.
+Portfólio estático de energia, dados, programação e processos. O site publicado reúne a página inicial e quatro páginas de projeto. A versão completa foi promovida à raiz após aprovação de Caio. A galeria anterior permanece no histórico Git, no commit `69e7017`.
 
 ## Abrir a prévia
 
@@ -25,13 +25,14 @@ Não é necessário Node, npm ou instalar dependências para abrir o site. Use o
 | Aplicativo de dieta | `projetos/dieta/index.html` |
 | Fonte editorial e estrutura comum das páginas | `tools/build.py` |
 | Texto autoral do artigo, sem dados do formulário | `content/artigo.md` |
+| Texto e diagramas dos dois projetos da Amara | `content/amara.html` |
 | Identidade visual e responsividade | `assets/site.css` |
 | Tema inicial | `assets/theme.js` |
 | Navegação e demonstrações | `assets/site.js` |
 | Modelo econômico puro e cenários históricos | `assets/bess.js` |
 | Controles, gráfico, CSV e compartilhamento | `assets/calculator.js` |
 
-Edite a fonte editorial em `tools/build.py` e o artigo em `content/artigo.md`. Gere os HTMLs com `python -X utf8 tools/build.py` e revise o diff. Os arquivos HTML gerados são versionados: o GitHub Pages apenas os serve, sem executar Python. Não edite só o HTML gerado, pois uma geração posterior sobrescreveria essa alteração.
+Edite a estrutura comum em `tools/build.py`, o caso Amara em `content/amara.html` e o artigo em `content/artigo.md`. Gere os HTMLs com `python -X utf8 tools/build.py` e revise o diff. Os arquivos HTML gerados são versionados: o GitHub Pages apenas os serve, sem executar Python. Não edite só o HTML gerado, pois uma geração posterior sobrescreveria essa alteração.
 
 O site funciona em sua raiz e em uma subpasta de prévia. As rotas possuem arquivos `index.html`, permitindo abertura direta e recarga sem fallback de aplicação. As fontes são locais. O site não depende de APIs, analytics ou cadastro.
 
@@ -53,7 +54,7 @@ Os artefatos devem ficar fora do repositório. As capturas de QA, o relatório d
 
 ## Publicar depois da aprovação
 
-A proposta foi preparada em `portfolio-final`, sem substituir `main`. Não há duas árvores editoriais independentes para manter. Depois de aprovada, revise o diff entre as branches e integre a versão aprovada à `main`. O Pages existente está configurado para servir a raiz da `main`.
+A versão inicial foi preparada em `portfolio-final` e integrada à `main` após aprovação. Novas alterações podem ser desenvolvidas em branches próprias, revisadas e então integradas à `main`. O Pages existente está configurado para servir a raiz da `main`.
 
 Antes de enviar, confira `git status`, autoria, diff e arquivos selecionados. Adicione explicitamente apenas os arquivos públicos revisados. Preserve a autoria já configurada e o e-mail noreply. Não use adição indiscriminada da pasta de planejamento.
 
