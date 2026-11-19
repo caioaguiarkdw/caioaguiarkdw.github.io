@@ -652,6 +652,7 @@ html:not(.js) #sales-reset { display: none; }
 .amara-glyph { display: grid; place-items: center; flex: 0 0 34px; height: 34px; border-radius: 6px; background: #385d8f; color: white; }
 .amara-glyph--logic { background: #71409a; }
 .amara-glyph--app { border: 1px solid var(--line); background: var(--surface-2); }
+.amara-glyph--zendesk { background: #e8efeb; }
 .amara-glyph img { width: 26px; height: 26px; object-fit: contain; }
 .amara-glyph svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .amara-nodes small, .amara-nodes strong, .amara-tree span { display: block; }
