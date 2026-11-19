@@ -649,10 +649,11 @@ html:not(.js) #sales-reset { display: none; }
 .amara-nodes li { position: relative; display: flex; align-items: center; gap: 12px; padding: 9px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
 .amara-nodes li + li { margin-top: 16px; }
 .amara-nodes li + li::before { content: ""; position: absolute; bottom: 100%; left: 50%; height: 16px; border-left: 2px solid var(--muted); }
-.amara-glyph { display: grid; place-items: center; flex: 0 0 28px; height: 28px; border-radius: 5px; background: #12625b; color: white; font: bold 12px monospace; }
-.amara-nodes li:nth-child(2) .amara-glyph, .amara-nodes li:nth-child(4) .amara-glyph { background: #71409a; }
-.amara-nodes li:nth-child(3) .amara-glyph { background: #167046; }
-.amara-nodes li:nth-child(n+5) .amara-glyph { background: #385d8f; }
+.amara-glyph { display: grid; place-items: center; flex: 0 0 34px; height: 34px; border-radius: 6px; background: #385d8f; color: white; }
+.amara-glyph--logic { background: #71409a; }
+.amara-glyph--app { border: 1px solid var(--line); background: var(--surface-2); }
+.amara-glyph img { width: 26px; height: 26px; object-fit: contain; }
+.amara-glyph svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .amara-nodes small, .amara-nodes strong, .amara-tree span { display: block; }
 .amara-nodes small, .amara-nodes p { color: var(--muted); font-size: 11px; }
 .amara-nodes strong { font-size: 14px; }

@@ -21,4 +21,6 @@ DM Sans e Space Grotesk são as famílias utilizadas. Arquivos locais e licença
 - Demonstração da dieta: código novo com itens e referências fictícios. Sem conexão com a API ou banco do aplicativo de uso real.
 - Calculadora: código público deste portfólio. Cenários históricos e investimento hipotético. As fontes dos preços e os limites ficam junto dos resultados e do artigo.
 
+Os ícones de Excel e SharePoint vêm da [biblioteca de ícones de produto da Microsoft](https://developer.microsoft.com/en-us/fluentui#/styles/web/m365-product-icons#product-icon-library). O ícone do Power Automate vem da [coleção oficial do Power Platform](https://learn.microsoft.com/en-us/power-platform/guidance/icons). Eles identificam as ferramentas no diagrama histórico.
+
 Os direitos dos textos e figuras permanecem com seus respectivos autores. A disponibilização neste portfólio não representa concessão de licença geral sobre materiais corporativos ou acadêmicos não incluídos.
